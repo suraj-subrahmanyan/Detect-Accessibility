@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website Accessibility</title>
-    <link rel="stylesheet" href="static/style.css">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">   
 </head>
 <body>
-    <form class="main_button">
-        <label for="website">Website Link</label>
-        <input type="link"><br></br>    
+    <form class="main_button" action="/detect-accessibility" method="POST">
+        <label for="website" id="website">Website Link</label>
+        <input type="url" placeholder = "https://example.com" name="websiteLink"><br></br>    
         <button type="submit">Check Accessibility</button>                    
      </form>    
 </body>
