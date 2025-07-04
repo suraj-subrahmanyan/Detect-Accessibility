@@ -1,3 +1,5 @@
+from flask import Flask
+
 def save(html, path):
     with open(path, 'wb') as f:
         f.write(html)
@@ -11,7 +13,6 @@ import requests
 from bs4 import BeautifulSoup
 
 # Get page content
-
 page_url = "https://books.toscrape.com/"
 getWebsite = requests.get(page_url)
 
